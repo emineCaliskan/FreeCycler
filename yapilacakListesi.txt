@@ -1,0 +1,7 @@
+Yapýlacak Listesi
+
+*Template site örneklerinin bulunmasý
+*Sitenin tasarýmýnýn yapýlmasý
+*Sitenin gerçeklenmesi
+*Ruby tutoriallarýnýn bulunmasý
+*Ruby implementasyonun yapýlmasý
