@@ -1,3 +1,29 @@
 body {
-    padding: 60px 0 0 0;
+    padding: 50px 0 0 0;
+    background-color: #fbfbfb;
+}
+
+.navbar {
+    margin: 0;
+    border-radius: 0px;
+}
+
+.indexpage-container {
+    max-width: 730px;
+    min-height: 700px;
+}
+
+.header-intro {
+    background:url('../images/header-green-bg.png') repeat-x 0 0;
+    height: 140px;
+}
+
+.footer-container {
+    max-width: 730px;
+}
+
+.footer {
+    background-color: #66512c;
+    height: 50px;
+    color: #f6f6f6;
 }
