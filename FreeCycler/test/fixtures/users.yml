@@ -1,19 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  id: 1
   name: MyString
   email: MyString
-  password: MyString
-  isBanned: 
+  isBanned: false
   profilePhotoUrl: MyString
   roleId: 1
+  password_hash: MyString
+  password_salt: MyString
 
 two:
-  id: 1
   name: MyString
   email: MyString
-  password: MyString
-  isBanned: 
+  isBanned: false
   profilePhotoUrl: MyString
   roleId: 1
+  password_hash: MyString
+  password_salt: MyString

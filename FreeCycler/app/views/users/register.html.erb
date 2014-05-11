@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container page-container">
 
   <% if @user != nil && @user.errors.any? %>
 
@@ -20,15 +20,15 @@
   <div class="row">
 
     <div class="row">
-      <div class="col-sm-3"></div>
-      <div class="col-sm-9">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-10">
         <h3>Kayıt Ol</h3>
       </div>
     </div>
 
     <div class="col-md-12">
 
-      <form class="form-horizontal" role="form" action="/user/registerpost" method="POST">
+      <form class="form-horizontal" role="form" action="/users/registerpost" method="POST">
 
         <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
 

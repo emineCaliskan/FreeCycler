@@ -1,21 +1,53 @@
 body {
-    padding: 50px 0 0 0;
-    background-color: #fbfbfb;
+    padding: 70px 0 0 0;
+    background-color: #FFFFFF;
+    color: #4d4d4d;
+    font-size: 14px;
+    font-family: Helvetica, Arial, 'lucida grande',tahoma,verdana,arial,sans-serif;
+}
+a {
+    color: #1B676B;
 }
 
 .navbar {
     margin: 0;
     border-radius: 0px;
+    background: #000000;
 }
 
-.indexpage-container {
+.navbar-default .navbar-brand {
+    color: #fefefe;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #f7f7f7;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #fefefe;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #f7f7f7;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    background: #070707;
+    color: #cccccc;
+}
+
+.page-container {
     max-width: 730px;
-    min-height: 700px;
+    min-height: 580px;
 }
 
 .header-intro {
-    background:url('../images/header-green-bg.png') repeat-x 0 0;
-    height: 140px;
+    /*background:#4DBCE9;*/ /*url('../images/header-green-bg.png') repeat-x 0 0*/;
+    /*height: 140px;*/
+    margin-top: -20px;
+    text-align: center;
 }
 
 .footer-container {
@@ -23,7 +55,95 @@ body {
 }
 
 .footer {
-    background-color: #66512c;
+    background-color: #D1E751;
     height: 50px;
-    color: #f6f6f6;
+    color: #519548;
+    padding: 15px 0 0 0;
+    text-align: center;
+}
+
+.requestOfferButtons {
+    padding: 20px 0 20px 0;
+}
+
+.requestOfferButtons div {
+    text-align: center;
+}
+
+.requestOfferButtons .btn {
+    width: 75%;
+}
+
+
+.requestOfferForm .cancelButton {
+    float: right;
+
+}
+
+.postsList * {
+    /*border: 1px solid red;*/
+}
+
+.postsList {
+    border-top: 1px solid #f1f1f1;
+    margin-top: 10px;
+    background: #fdfdfd;
+}
+
+.postsList .post {
+    position: relative;
+    min-height: 70px;
+    padding: 10px 10px 10px 70px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.postsList .post .profilePhoto {
+    display: block;
+    position: absolute;
+    left: 10px;
+    top:10px;
+    width: 50px;
+    height: 50px;
+}
+
+.postsList .post .bodyTextParent {
+
+}
+
+.postsList .post .dateTimeParent {
+    font-size: 12px;
+    padding: 4px 0;
+    margin-top: 3px;
+}
+
+.postsList .post .commentsList {
+
+}
+
+.postsList .post .commentsList .comment {
+    position: relative;
+    padding: 7px 7px 7px 37px;
+}
+.postsList .post .commentsList .comment .commentProfilePhoto {
+    display: block;
+    position: absolute;
+    left: 0;
+    top:7px;
+    width: 30px;
+    height: 30px;
+}
+.postsList .post .commentsList .comment .commentTextParent {}
+.postsList .post .commentsList .comment .commentDateTimeParent {}
+
+#postCommentForm {
+    padding: 5px 0 0 0;
+}
+
+.myProfileProfilePhoto {
+    text-align: center;
+}
+
+.myProfileProfilePhoto img {
+    width: 120px;
+    height: 120px;
 }

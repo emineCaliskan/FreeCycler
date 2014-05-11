@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bodyText: MyString
+  isConfirmed: false
+  isStillAvailable: false
+  user_id: 1
+  postType: 1
+
+two:
+  bodyText: MyString
+  isConfirmed: false
+  isStillAvailable: false
+  user_id: 1
+  postType: 1

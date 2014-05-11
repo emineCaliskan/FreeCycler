@@ -1,0 +1,88 @@
+<div class="container container-fluid page-container">
+  <div class="row">
+    <div class="col-lg-12">
+
+      <div class="myProfileProfilePhoto well row">
+        <a href="/editProfile">
+        <% if current_user.profilePhotoUrl != nil %>
+            <img src="/images/profilePhotos/<%= current_user.profilePhotoUrl %>" alt="" />
+        <% else %>
+            <img src="" alt="/images/koala.jpg" />
+        <% end %>
+        </a>
+
+        <p><h4><%= current_user.name %></h4></p>
+      </div>
+
+      <h3 class="row">Gönderilerim</h3>
+
+      <div class="postsList row well">
+
+        <% @posts.each do |p| %>
+
+            <div class="post">
+
+              <% if p.user.profilePhotoUrl != nil && p.user.profilePhotoUrl.length > 0 %>
+                  <img class="profilePhoto" src="/images/profilePhotos/<%= p.user.profilePhotoUrl %>" alt="" />
+              <% else %>
+                  <img class="profilePhoto" src="/images/koala.jpg" alt="" />
+              <% end %>
+
+              <div class="bodyTextParent">
+
+                <% if p.postType == 1 %>
+                    <span class="label label-info">TALEP</span>
+                <% else %>
+                    <span class="label label-warning">TEKLİF</span>
+                <% end %>
+
+                <strong><%= p.user.name %>:</strong>
+                <span class="bodyText"><%= p.bodyText %></span>
+              </div>
+
+              <div class="dateTimeParent">
+                <span class="dateTime"><%= p.created_at  %></span> &middot;
+                <a href="#">Beğen</a>
+              </div>
+
+              <div class="commentsList" id="commentsList_<%= p.id %>">
+
+                <% p.comments.each do |c| %>
+
+                    <div class="comment">
+
+                      <% if c.user.profilePhotoUrl != nil && c.user.profilePhotoUrl.length > 0 %>
+                          <img class="commentProfilePhoto" src="/images/profilePhotos/<%= c.user.profilePhotoUrl %>" alt="" />
+                      <% else %>
+                          <img class="commentProfilePhoto" src="/images/koala.jpg" alt="" />
+                      <% end %>
+
+                      <div class="commentTextParent">
+                        <span><strong><%= c.user.name %>:</strong> <%= c.commentText %></span>
+                      </div>
+                      <div class="commentDateTimeParent">
+                        <span><%= c.created_at %></span>
+                      </div>
+                    </div>
+                <% end %>
+
+                <form class="form-inline" role="form" id="postCommentForm">
+                  <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
+                  <input type="hidden" name="postId" value="<%= p.id %>" />
+                  <div class="form-group">
+                    <input class="form-control" type="text" id="commentText" name="commentText" rows="1" placeholder="Yorumuzunu girin..." />
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Gönder</button>
+                </form>
+
+              </div>
+
+            </div>
+        <% end %>
+
+      </div>
+
+    </div>
+  </div>
+</div>
